@@ -62,6 +62,7 @@ public class airConditioner {
 			 System.out.println("AC Fan switched on.");
 		 }
 		 sc.close(); 
+		 
 	}
 
 }

@@ -22,6 +22,7 @@ public class homeLights {
 			 System.out.println("Lights switched on.");
 		 }
 		 sc.close(); 
+		 
 	}
 
 }
