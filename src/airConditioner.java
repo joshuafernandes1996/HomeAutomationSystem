@@ -44,6 +44,7 @@ public class airConditioner {
 			 status=true;
 			 System.out.println("AC switched on.");
 		 }
+		 sc.close(); 
 	}
 	
 	public void ChangeTemp(int tmp){
@@ -60,6 +61,7 @@ public class airConditioner {
 			 fanStatus=true;
 			 System.out.println("AC Fan switched on.");
 		 }
+		 sc.close(); 
 	}
 
 }
