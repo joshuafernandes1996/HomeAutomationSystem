@@ -57,7 +57,6 @@ public class tv {
 			 System.out.println("Enter Proper Input");
 		 }
 		 sc.close(); 
-	
 	}
 	
 	public void ChangeChannel(){
