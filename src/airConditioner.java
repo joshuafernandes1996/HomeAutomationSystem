@@ -34,17 +34,14 @@ public class airConditioner {
 
 	
 	
-	public void switchACOn(boolean status)
-	{
-		System.out.println("Switch AC on? Yes/No");
-		 String reply=sc.next(); 
-		 
-		 if(reply=="yes" | reply=="Yes")
-		 {
-			 status=true;
-			 System.out.println("AC switched on.");
-		 }
-		 sc.close(); 
+	public void switchACOn(){
+		this.status=true;
+		System.out.println("AC on.");
+	}
+	
+	public void switchACOff(){
+		this.status=false;
+		System.out.println("AC Off.");
 	}
 	
 	public void ChangeTemp(int tmp){
@@ -52,17 +49,13 @@ public class airConditioner {
 		System.out.println("Temperature set to "+tmp+" degrees");	
 	}
 	
-	public void switchACFanOn(boolean fanStatus){
-		System.out.println("Switch AC Fan on? Yes/No");
-		 String reply=sc.next(); 
-		 
-		 if(reply=="yes" | reply=="Yes")
-		 {
+	public void switchACFanOn(){
 			 fanStatus=true;
 			 System.out.println("AC Fan switched on.");
 		 }
-		 sc.close(); 
-		 
-	}
+	public void switchACFanOff(){
+		 fanStatus=false;
+		 System.out.println("AC Fan switched off.");
+	 }
 
 }

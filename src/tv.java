@@ -1,10 +1,10 @@
 import java.util.Scanner;  
 
 public class tv {
-	boolean TVStatus;
-	int ChannelNo;
-	int VolumeUp;
-	int VolumeDown;
+	boolean TVStatus=false;
+	int ChannelNo=0;
+	int VolumeUp=0;
+	int VolumeDown=0;
 	
 	public boolean isTVStatus() {
 		return TVStatus;
@@ -37,11 +37,23 @@ public class tv {
 			 System.out.println("TV switched on.");
 		 }
 	
+	public void swtichTvOff(){
+		 TVStatus=false;
+		 System.out.println("TV switched off.");
+	 }
+	
 	public void ChangeVolume(){
+		volume(); 
+	}
+	private void volume() {
 		Scanner sc=new Scanner(System.in);  
 		System.out.println("Increase or Decrease Volume. Reply(I/D)");
 		 String reply=sc.next(); 
-		 if(reply=="i" | reply=="I")
+		 checkReply(sc, reply);
+		 sc.close();
+	}
+	private void checkReply(Scanner sc, String reply) {
+		if(reply=="i" | reply=="I")
 		 {
 			 System.out.println("Enter Volume.");
 			 int vol=sc.nextInt(); 
@@ -56,7 +68,6 @@ public class tv {
 		 else{
 			 System.out.println("Enter Proper Input");
 		 }
-		 sc.close(); 
 	}
 	
 	public void ChangeChannel(){

@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class audioSystem {
-	boolean audioStatus;
-	int volume;
+	boolean audioStatus=false;
+	int volume=0;
 	
 	public boolean isAudioStatus() {
 		return audioStatus;
@@ -21,6 +21,12 @@ public class audioSystem {
 		this.audioStatus=true;
 		System.out.println("Audio System on.");
 	}
+	
+	public void switchAudioOff(){
+		this.audioStatus=false;
+		System.out.println("Audio System off.");
+	}
+	
 	
 	public void ChangeVolume(){
 		Scanner sc=new Scanner(System.in);  
